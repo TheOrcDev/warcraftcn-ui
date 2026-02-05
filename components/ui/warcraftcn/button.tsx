@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 import bgImage from "./assets/button-bg.png";
 import bgWithFrameImage from "./assets/button-bg-with-frame.png";
+import bgWithFrameImageSm from "./assets/button-bg-with-frame-sm.png";
 
 import "@/components/ui/warcraftcn/styles/warcraft.css";
 
@@ -15,13 +16,19 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "w-104 h-16 bg-center bg-cover bg-no-repeat text-white shadow-lg transition-shadow hover:shadow-xl hover:brightness-110",
+          "bg-center bg-cover bg-no-repeat text-white shadow-lg transition-shadow hover:shadow-xl hover:brightness-110",
         frame:
-          "w-120 h-24 bg-center bg-cover bg-no-repeat text-white shadow-lg transition-shadow hover:shadow-xl hover:brightness-110",
+          "bg-center bg-cover bg-no-repeat text-white shadow-lg transition-shadow hover:shadow-xl hover:brightness-110",
+      },
+      size: {
+        default: "",
+        sm: "",
+        lg: "",
       },
     },
     defaultVariants: {
       variant: "default",
+      size: "default",
     },
   }
 );
@@ -31,18 +38,34 @@ function Button({
   variant,
   asChild = false,
   style,
+  size,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
-  const bgUrl = variant === "frame" ? bgWithFrameImage.src : bgImage.src;
+  const bgUrl = () => {
+    if (variant === "frame") {
+      return size === "sm" ? bgWithFrameImageSm.src : bgWithFrameImage.src;
+    }
+
+    return bgImage.src;
+  }
+
+  const sizeClass = () => {
+
+    if(variant === "frame") {
+      return size === "sm" ? "w-80 h-26" : "w-120 h-24";
+    }
+    return "w-104 h-16";
+  }
+  const sizeClassStyle = { [sizeClass()]: true };
 
   return(
     <Comp
-      className={cn(buttonVariants({ variant }), className)}
-      style={{ backgroundImage: `url(${bgUrl})`, ...style }}
+      className={cn(buttonVariants({ variant, size }), className, sizeClassStyle)}
+      style={{ backgroundImage: `url(${bgUrl()})`, ...style }}
       data-slot="button"
       {...props}
     />
