@@ -7,7 +7,7 @@
       "name": "button",
       "type": "registry:component",
       "title": "Warcraft Button",
-      "description": "A simple 8-bit button component",
+      "description": "A Warcraft-themed button component with fantasy styling",
       "registryDependencies": [],
       "files": [
         {
@@ -46,7 +46,7 @@
       "name": "input",
       "type": "registry:component",
       "title": "Warcraft Input",
-      "description": "A simple 8-bit input component",
+      "description": "A Warcraft-themed input component with fantasy styling",
       "registryDependencies": [],
       "files": [
         {
@@ -70,7 +70,7 @@
       "name": "card",
       "type": "registry:component",
       "title": "Warcraft Card",
-      "description": "A simple 8-bit card component",
+      "description": "A Warcraft-themed card component with fantasy styling",
       "registryDependencies": [],
       "files": [
         {
