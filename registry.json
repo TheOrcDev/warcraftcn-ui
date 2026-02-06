@@ -1,0 +1,94 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "warcraftcn",
+  "homepage": "https://warcraftcn.com",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Warcraft Button",
+      "description": "A Warcraft-themed button component with fantasy styling",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/button.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/button.tsx"
+        },
+        {
+          "path": "components/ui/warcraftcn/styles/warcraft.css",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/styles/warcraft.css"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/button-bg.png",
+          "type": "registry:asset",
+          "target": "components/ui/warcraftcn/assets/button-bg.png"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/button-bg-with-frame.png",
+          "type": "registry:asset",
+          "target": "components/ui/warcraftcn/assets/button-bg-with-frame.png"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/button-bg-with-frame-sm.png",
+          "type": "registry:asset",
+          "target": "components/ui/warcraftcn/assets/button-bg-with-frame-sm.png"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/button-bg-sm.png",
+          "type": "registry:asset",
+          "target": "components/ui/warcraftcn/assets/button-bg-sm.png"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "title": "Warcraft Input",
+      "description": "A Warcraft-themed input component with fantasy styling",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/input.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/input.tsx"
+        },
+        {
+          "path": "components/ui/warcraftcn/styles/warcraft.css",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/styles/warcraft.css"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/input-frame.png",
+          "type": "registry:asset",
+          "target": "components/ui/warcraftcn/assets/input-frame.png"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Warcraft Card",
+      "description": "A Warcraft-themed card component with fantasy styling",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/card.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/card.tsx"
+        },
+        {
+          "path": "components/ui/warcraftcn/styles/warcraft.css",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/styles/warcraft.css"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/card-bg.png",
+          "type": "registry:asset",
+          "target": "components/ui/warcraftcn/assets/card-bg.png"
+        }
+      ]
+    }
+  ]
+}

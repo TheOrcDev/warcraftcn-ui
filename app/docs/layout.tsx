@@ -8,7 +8,7 @@ export default function Layout({ children }: LayoutProps<"/docs">) {
     <SidebarProvider>
       <DocsSidebar tree={source.pageTree} />
       <SidebarInset>
-        <div className="container flex-1 py-6">{children}</div>
+        <div className="container flex-1 px-3 py-6">{children}</div>
         <DocsFooter />
       </SidebarInset>
     </SidebarProvider>

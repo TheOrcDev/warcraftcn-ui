@@ -3,5 +3,63 @@ title: Card
 description: A Warcraft III styled card component with parchment textures and gothic frames.
 ---
 
-**Coming Soon** — This component is currently under development. Check back
-later for the full implementation.
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  CardAction,
+} from "@/components/ui/warcraftcn/card";
+import { Button } from "@/components/ui/warcraftcn/button";
+
+## Standard
+
+<Card className="hidden md:block">
+  <CardHeader>
+    <CardTitle>Arthas Menethil</CardTitle>
+    <CardDescription>Prince of Lordaeron</CardDescription>
+  </CardHeader>
+  <CardContent className="text-white">
+    The former Crown Prince of Lordaeron, who became the Lich King after taking
+    up the cursed blade Frostmourne.
+  </CardContent>
+  <CardFooter className="flex items-center justify-center">
+    <Button size="sm">View Profile</Button>
+  </CardFooter>
+</Card>
+
+<div className="md:hidden">Card still not supporting small resolutions</div>
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add @warcraftcn/card
+```
+
+## Usage
+
+```tsx
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/warcraftcn/card";
+
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card description</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p>Card content goes here.</p>
+  </CardContent>
+  <CardFooter>
+    <p>Card footer</p>
+  </CardFooter>
+</Card>;
+```

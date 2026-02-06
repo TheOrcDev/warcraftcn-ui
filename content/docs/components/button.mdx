@@ -1,7 +1,40 @@
 ---
 title: Button
-description: A Warcraft III styled button component with ornate borders and hover effects.
+description: A Warcraft III styled button component.
 ---
 
-**Coming Soon** — This component is currently under development. Check back
-later for the full implementation.
+import { Button } from "@/components/ui/warcraftcn/button";
+
+## Standard
+
+<Button>CAMPAIGN</Button>
+
+## Standard Small
+
+<Button size="sm">CAMPAIGN</Button>
+
+## With Frame
+
+<Button variant="frame" className="text-2xl">
+  CAMPAIGN
+</Button>
+
+## With Frame Small
+
+<Button variant="frame" size="sm" className="text-2xl">
+  CAMPAIGN
+</Button>
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add @warcraftcn/button
+```
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/warcraftcn/button";
+
+<Button>Button</Button>;
+```
