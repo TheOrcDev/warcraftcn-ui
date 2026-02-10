@@ -33,3 +33,121 @@
 .clip-path-banner {
   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
 }
+@keyframes portal-in {
+  0% {
+    transform: translate(-50%, -45%) scale(0.9) rotate3d(1, 1, 0, -15deg);
+    opacity: 0;
+    filter: brightness(2) blur(10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
+    filter: brightness(1) blur(0px);
+  }
+}
+
+@keyframes portal-out {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: brightness(1) blur(0px);
+  }
+  100% {
+    transform: translate(-50%, -55%) scale(1.1);
+    opacity: 0;
+    filter: brightness(3) blur(20px);
+  }
+}
+
+.animate-portal-in {
+  animation: portal-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-portal-out {
+  animation: portal-out 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+.wc-dialog-content {
+  border-style: var(--tw-border-style);
+  border-width: 32px;
+  border-image-source: url("https://warcraftcn.com/warcraftcn/card-bg.webp");
+  border-image-slice: 32 fill;
+  border-image-repeat: stretch;
+}
+
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.2;
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px) scale(1.2);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translateY(-40px) translateX(-5px) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.wc-parchment {
+  background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+  background-color: rgba(251, 191, 36, 0.05);
+  mix-blend-mode: overlay;
+}
+
+.wc-corner {
+  width: 64px;
+  height: 64px;
+  background-image: url("https://warcraftcn.com/warcraftcn/button-bg-with-frame.webp");
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.3));
+}
+
+.wc-corner-tl { top: -16px; left: -16px; transform: rotate(0deg); }
+.wc-corner-tr { top: -16px; right: -16px; transform: rotate(90deg); }
+.wc-corner-bl { bottom: -16px; left: -16px; transform: rotate(-90deg); }
+.wc-corner-br { bottom: -16px; right: -16px; transform: rotate(180deg); }
+
+.animate-float-particle {
+  animation: float-particle 4s ease-in-out infinite;
+}
+
+.wc-close-x {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 5px rgba(239, 68, 68, 0.4));
+  transition: all 0.2s ease;
+}
+
+.wc-close-x:hover {
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1)) drop-shadow(0 0 8px rgba(239, 68, 68, 0.6)) brightness(1.2);
+}
+.wc-dialog-content::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 2px solid rgba(251, 191, 36, 0.2);
+  border-radius: 28px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.wc-dialog-horde {
+  border-image-source: url("https://warcraftcn.com/warcraftcn/button-bg-with-frame.webp") !important;
+  filter: sepia(0.5) hue-rotate(-50deg) brightness(0.8) contrast(1.2);
+}
+
+.wc-dialog-horde .wc-parchment {
+  background-color: rgba(239, 68, 68, 0.08);
+}
+
+.wc-dialog-horde .wc-corner {
+  filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.4)) brightness(0.7) sepia(0.3) saturate(2);
+}
