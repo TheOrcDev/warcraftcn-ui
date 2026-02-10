@@ -226,7 +226,7 @@ function DropdownMenuSubTrigger({
       {...props}
     >
       {children}
-      <ChevronRightIcon className="ml-auto" />
+      <ChevronRightIcon className="cn-rtl-flip ml-auto" />
     </DropdownMenuPrimitive.SubTrigger>
   )
 }

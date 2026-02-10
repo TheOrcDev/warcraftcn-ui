@@ -152,9 +152,9 @@
           "target": "components/ui/warcraftcn/styles/warcraft.css"
         },
         {
-          "path": "components/ui/warcraftcn/assets/card-bg.webp",
+          "path": "components/ui/warcraftcn/assets/dropdown-menu-bg.webp",
           "type": "registry:file",
-          "target": "components/ui/warcraftcn/assets/card-bg.webp"
+          "target": "components/ui/warcraftcn/assets/dropdown-menu-bg.webp"
         }
       ]
     }

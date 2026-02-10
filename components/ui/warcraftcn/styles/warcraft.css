@@ -30,6 +30,10 @@
   background-image: url("https://warcraftcn.com/warcraftcn/input-frame.webp");
 }
 
+.wc-dropdown-menu-bg {
+  background-image: url("https://warcraftcn.com/warcraftcn/dropdown-menu-bg.webp");
+}
+
 /* ============================================
    SKELETON BASE & FACTION VARIANTS
    ============================================ */
