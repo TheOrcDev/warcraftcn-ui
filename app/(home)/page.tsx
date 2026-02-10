@@ -1,4 +1,3 @@
-import { ChevronDown, Heart, Shield, Sword, Wand2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/warcraftcn/button";
@@ -9,14 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/warcraftcn/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/warcraftcn/dropdown-menu";
 
 export default function Home() {
   return (
@@ -52,29 +43,6 @@ export default function Home() {
           <Link href="/docs">
             <Button className="px-10 text-xl">Get Started</Button>
           </Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="gap-2">
-                Select Class <ChevronDown className="size-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>Choose Your Path</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <Sword className="size-4" /> Warrior
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Shield className="size-4" /> Paladin
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Wand2 className="size-4" /> Mage
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Heart className="size-4" /> Priest
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </CardFooter>
       </Card>
     </div>

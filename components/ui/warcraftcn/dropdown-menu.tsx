@@ -46,7 +46,7 @@ function DropdownMenuContent({
         sideOffset={sideOffset}
         align={align}
         className={cn(
-          "fantasy z-50 min-w-40 overflow-hidden text-amber-100",
+          "fantasy z-50 min-w-40 pb-4 overflow-hidden text-amber-100",
           "border-solid [border-image-source:url('/warcraftcn/dropdown-menu-bg.webp')] [border-image-repeat:stretch] border-12 [border-image-slice:12_fill]",
           "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
           "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
@@ -78,7 +78,7 @@ function DropdownMenuItem({
       data-slot="dropdown-menu-item"
       data-inset={inset}
       className={cn(
-        "fantasy relative flex cursor-pointer select-none items-center gap-2 px-4 py-2 text-sm text-amber-100 outline-none transition-all",
+        "fantasy relative flex cursor-pointer select-none items-center gap-2 px-5 py-2 text-sm text-amber-100 outline-none transition-all",
         "hover:brightness-150 hover:bg-amber-900/30",
         "focus:brightness-150 focus:bg-amber-900/30",
         "data-disabled:pointer-events-none data-disabled:opacity-50",

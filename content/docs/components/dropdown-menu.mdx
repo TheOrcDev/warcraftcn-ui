@@ -21,9 +21,9 @@ import { ChevronDown, Sword, Shield, Wand2, Heart } from "lucide-react";
 
 <DropdownMenu>
   <DropdownMenuTrigger asChild>
-    <Button className="flex gap-2 w-96">Select Class</Button>
+    <Button className="flex gap-2 w-64 md:w-96">Select Class</Button>
   </DropdownMenuTrigger>
-  <DropdownMenuContent className="w-96">
+  <DropdownMenuContent className="w-64 md:w-96">
     <DropdownMenuLabel>Choose Your Path</DropdownMenuLabel>
     <DropdownMenuSeparator />
     <DropdownMenuItem className="flex gap-2">
@@ -73,10 +73,3 @@ import { Button } from "@/components/ui/warcraftcn/button";
   </DropdownMenuContent>
 </DropdownMenu>;
 ```
-
-## Features
-
-- **Border-image frames** — Uses CSS border-image for resizable fantasy frames
-- **Brightness hover** — Items brighten on hover for clear feedback
-- **Amber/gold theme** — Warcraft-inspired color palette
-- **Full Radix UI support** — Checkbox items, radio groups, sub-menus, shortcuts
