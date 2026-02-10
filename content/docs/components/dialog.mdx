@@ -31,9 +31,11 @@ import {
     </DialogHeader>
     <DialogFooter>
       <DialogClose asChild>
-        <Button className="brightness-75 saturate-50">Maybe Later</Button>
+        <Button className="brightness-75 saturate-50">Cancel</Button>
       </DialogClose>
-      <Button>I Accept</Button>
+      <DialogClose asChild>
+        <Button>Continue</Button>
+      </DialogClose>
     </DialogFooter>
   </DialogContent>
 </Dialog>
@@ -47,10 +49,21 @@ pnpm dlx shadcn@latest add https://warcraftcn.com/r/dialog.json
 ## Usage
 
 ```tsx
-import { Dialog } from "@/components/ui/warcraftcn/dialog";
-
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/warcraftcn/dialog";
+import { Button } from "@/components/ui/warcraftcn/button";
 <Dialog>
-  <DialogTrigger>Open</DialogTrigger>
+  <DialogTrigger asChild>
+    <Button>Open</Button>
+  </DialogTrigger>
   <DialogContent>
     <DialogHeader>
       <DialogTitle>Are you absolutely sure?</DialogTitle>
