@@ -1,0 +1,84 @@
+---
+title: Dropdown Menu
+description: A Warcraft III styled dropdown menu with fantasy frames.
+---
+
+import { Button } from "@/components/ui/warcraftcn/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+} from "@/components/ui/warcraftcn/dropdown-menu";
+import { ChevronDown, Sword, Shield, Wand2, Heart } from "lucide-react";
+
+## Standard
+
+<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button className="gap-2">
+      Select Class <ChevronDown className="size-4" />
+    </Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>Choose Your Path</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>
+      <Sword className="size-4" /> Warrior
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Shield className="size-4" /> Paladin
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Wand2 className="size-4" /> Mage
+    </DropdownMenuItem>
+    <DropdownMenuItem>
+      <Heart className="size-4" /> Priest
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add https://warcraftcn.com/r/dropdown-menu.json
+```
+
+## Usage
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/warcraftcn/dropdown-menu";
+import { Button } from "@/components/ui/warcraftcn/button";
+
+<DropdownMenu>
+  <DropdownMenuTrigger asChild>
+    <Button>Open Menu</Button>
+  </DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>Actions</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Settings</DropdownMenuItem>
+    <DropdownMenuItem>Logout</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Features
+
+- **Border-image frames** — Uses CSS border-image for resizable fantasy frames
+- **Brightness hover** — Items brighten on hover for clear feedback
+- **Amber/gold theme** — Warcraft-inspired color palette
+- **Full Radix UI support** — Checkbox items, radio groups, sub-menus, shortcuts

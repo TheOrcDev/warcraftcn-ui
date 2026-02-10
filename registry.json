@@ -132,6 +132,31 @@
           "target": "components/ui/warcraftcn/assets/badge-bg.webp"
         }
       ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:component",
+      "title": "Warcraft Dropdown Menu",
+      "description": "A Warcraft-themed dropdown menu component with fantasy styling and border-image frames",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/dropdown-menu.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/dropdown-menu.tsx"
+        },
+        {
+          "path": "components/ui/warcraftcn/styles/warcraft.css",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/styles/warcraft.css"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/card-bg.webp",
+          "type": "registry:file",
+          "target": "components/ui/warcraftcn/assets/card-bg.webp"
+        }
+      ]
     }
   ]
 }

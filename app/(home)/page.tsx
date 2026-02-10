@@ -1,3 +1,4 @@
+import { ChevronDown, Heart, Shield, Sword, Wand2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/warcraftcn/button";
@@ -8,6 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/warcraftcn/card";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/warcraftcn/dropdown-menu";
 
 export default function Home() {
   return (
@@ -19,7 +28,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,171,1,0.5)_0%,rgba(255,171,1,0.3)_20%,rgba(82,214,252,0.25)_50%,transparent_75%)] blur-[100px]" />
       </div>
 
-      <Card className="relative z-10 min-h-185 max-w-xl">
+      <Card className="relative z-10 min-h-[90vh] max-w-xl">
         <CardHeader className="text-white">
           <CardTitle className="text-center font-bold text-2xl md:text-4xl">
             warcraftcn
@@ -28,7 +37,7 @@ export default function Home() {
         <CardContent className="flex flex-col items-center justify-center gap-2 pt-5">
           <Image
             alt="logo"
-            className="h-50 w-50 md:h-80 md:w-80"
+            className="size-50 md:h-80 md:w-80"
             height={300}
             src="/warcraftcn-logo.png"
             width={300}
@@ -39,10 +48,33 @@ export default function Home() {
             frameworks. Fan made. No affiliation.
           </p>
         </CardContent>
-        <CardFooter className="flex items-center justify-center">
+        <CardFooter className="flex flex-col items-center justify-center gap-4">
           <Link href="/docs">
             <Button className="px-10 text-xl">Get Started</Button>
           </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="gap-2">
+                Select Class <ChevronDown className="size-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>Choose Your Path</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Sword className="size-4" /> Warrior
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Shield className="size-4" /> Paladin
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Wand2 className="size-4" /> Mage
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Heart className="size-4" /> Priest
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </CardFooter>
       </Card>
     </div>
