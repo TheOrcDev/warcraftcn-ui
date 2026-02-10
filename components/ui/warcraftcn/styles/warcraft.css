@@ -259,3 +259,175 @@
 .clip-path-banner {
   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
 }
+@keyframes portal-in {
+  0% {
+    transform: translate(-50%, -45%) scale(0.9) rotate3d(1, 1, 0, -15deg);
+    opacity: 0;
+    filter: brightness(2) blur(10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
+    filter: brightness(1) blur(0px);
+  }
+}
+
+@keyframes portal-out {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: brightness(1) blur(0px);
+  }
+  100% {
+    transform: translate(-50%, -55%) scale(1.1);
+    opacity: 0;
+    filter: brightness(3) blur(20px);
+  }
+}
+
+.animate-portal-in {
+  animation: portal-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-portal-out {
+  animation: portal-out 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-portal-in,
+  .animate-portal-out,
+  .animate-float-particle {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.wc-dialog-content {
+  border-style: var(--tw-border-style);
+  border-width: 32px;
+  border-image-source: url("https://warcraftcn.com/warcraftcn/card-bg.webp");
+  border-image-slice: 32 fill;
+  border-image-repeat: stretch;
+}
+
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.2;
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px) scale(1.2);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translateY(-40px) translateX(-5px) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.wc-parchment {
+  background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+  background-color: rgba(251, 191, 36, 0.05);
+  mix-blend-mode: overlay;
+}
+
+.wc-corner {
+  width: 64px;
+  height: 64px;
+  background-image: url("https://warcraftcn.com/warcraftcn/button-bg-with-frame.webp");
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.3));
+}
+
+.wc-corner-tl { top: -16px; left: -16px; transform: rotate(0deg); }
+.wc-corner-tr { top: -16px; right: -16px; transform: rotate(90deg); }
+.wc-corner-bl { bottom: -16px; left: -16px; transform: rotate(-90deg); }
+.wc-corner-br { bottom: -16px; right: -16px; transform: rotate(180deg); }
+
+.animate-float-particle {
+  animation: float-particle 4s ease-in-out infinite;
+}
+
+.wc-close-x {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 5px rgba(239, 68, 68, 0.4));
+  transition: all 0.2s ease;
+}
+
+.wc-close-x:hover {
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1)) drop-shadow(0 0 8px rgba(239, 68, 68, 0.6)) brightness(1.2);
+}
+.wc-dialog-content::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 2px solid rgba(251, 191, 36, 0.2);
+  border-radius: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.wc-dialog-horde {
+  border-image-source: url("https://warcraftcn.com/warcraftcn/button-bg-with-frame.webp") !important;
+  filter: sepia(0.5) hue-rotate(-50deg) brightness(0.8) contrast(1.2);
+}
+
+.wc-dialog-alliance {
+  border-image-source: url("https://warcraftcn.com/warcraftcn/button-bg-with-frame.webp") !important;
+  filter: saturate(1.5) hue-rotate(10deg) brightness(0.9) contrast(1.1);
+}
+
+.wc-dialog-horde .wc-parchment {
+  background-color: rgba(239, 68, 68, 0.08);
+}
+
+.wc-dialog-alliance .wc-parchment {
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+.wc-dialog-horde .wc-corner-plate {
+  filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.4)) brightness(0.7) sepia(0.3) saturate(2);
+}
+
+.wc-dialog-alliance .wc-corner-plate {
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.4)) brightness(1.1) saturate(1.2);
+}
+
+.wc-quest-bg {
+  background-color: #1a100a;
+  background-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0.4), transparent 10%, transparent 90%, rgba(0,0,0,0.6)),
+    repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(0,0,0,0.3) 40px),
+    url("https://www.transparenttextures.com/patterns/p6.png");
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+}
+
+.wc-corner-plate {
+  width: 50px;
+  height: 50px;
+  background-color: #1e293b;
+  background-image: 
+    linear-gradient(135deg, rgba(255,255,255,0.1), transparent),
+    url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+  border: 1px solid #475569;
+  position: absolute;
+  z-index: 20;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.wc-plate-rivet {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle at 30% 30%, #94a3b8, #1e293b);
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.wc-close-plate {
+  background: linear-gradient(to bottom, #1e3a8a, #1e293b);
+  border: 1px solid #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), inset 0 0 5px rgba(255,255,255,0.1);
+}
