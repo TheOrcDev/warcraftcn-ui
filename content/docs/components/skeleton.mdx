@@ -1,0 +1,96 @@
+---
+title: Skeleton
+description: A Warcraft-themed skeleton/loading placeholder with faction themes and shimmer animation.
+---
+
+import { Skeleton } from "@/components/ui/warcraftcn/skeleton";
+
+## Default
+
+<div className="flex items-center gap-4">
+  <Skeleton className="size-12" variant="circular" />
+  <div className="space-y-2 flex-1">
+    <Skeleton className="h-4 w-64" />
+    <Skeleton className="h-4 w-48" />
+  </div>
+</div>
+
+## Orc Faction
+
+<div className="flex items-center gap-4">
+  <Skeleton faction="orc" className="size-12" variant="circular" />
+  <div className="space-y-2 flex-1">
+    <Skeleton faction="orc" className="h-4 w-64" />
+    <Skeleton faction="orc" className="h-4 w-48" />
+  </div>
+</div>
+
+## Elf Faction
+
+<div className="flex items-center gap-4">
+  <Skeleton faction="elf" className="size-12" variant="circular" />
+  <div className="space-y-2 flex-1">
+    <Skeleton faction="elf" className="h-4 w-64" />
+    <Skeleton faction="elf" className="h-4 w-48" />
+  </div>
+</div>
+
+## Human Faction
+
+<div className="flex items-center gap-4">
+  <Skeleton faction="human" className="size-12" variant="circular" />
+  <div className="space-y-2 flex-1">
+    <Skeleton faction="human" className="h-4 w-64" />
+    <Skeleton faction="human" className="h-4 w-48" />
+  </div>
+</div>
+
+## Undead Faction
+
+<div className="flex items-center gap-4">
+  <Skeleton faction="undead" className="size-12" variant="circular" />
+  <div className="space-y-2 flex-1">
+    <Skeleton faction="undead" className="h-4 w-64" />
+    <Skeleton faction="undead" className="h-4 w-48" />
+  </div>
+</div>
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add https://warcraftcn.com/r/skeleton.json
+```
+
+## Usage
+
+```tsx
+import { Skeleton } from "@/components/ui/warcraftcn/skeleton";
+
+<Skeleton className="h-12 w-full" />;
+```
+
+## Shapes
+
+```tsx
+// Default rectangular shape
+<Skeleton className="h-12 w-full" />
+
+// Circular shape (for avatars)
+<Skeleton variant="circular" className="size-12" />
+```
+
+## Factions
+
+```tsx
+// Orc - red/brown with axe icons
+<Skeleton faction="orc" className="h-12 w-full" />
+
+// Elf - teal/green with leaf icons
+<Skeleton faction="elf" className="h-12 w-full" />
+
+// Human - blue with shield icons
+<Skeleton faction="human" className="h-12 w-full" />
+
+// Undead - purple with skull icons
+<Skeleton faction="undead" className="h-12 w-full" />
+```
