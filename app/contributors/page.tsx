@@ -156,7 +156,7 @@ export default async function ContributorsPage() {
                   View on GitHub
                 </Link>
               </Button>
-              <Button asChild variant="secondary">
+              <Button asChild>
                 <Link
                   href="https://github.com/TheOrcDev/warcraftcn-ui/blob/main/contributing.md"
                   rel="noopener noreferrer"
