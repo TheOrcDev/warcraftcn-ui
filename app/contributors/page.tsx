@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/warcraftcn/card";
 
 export const metadata: Metadata = {
-  title: "Contributors",
+  title: "Warcraftcn Contributors",
   description: "Meet the champions who worked on this project.",
 };
 

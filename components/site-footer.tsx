@@ -9,6 +9,10 @@ export function SiteFooter() {
           <Link className="underline" href="https://orcdev.com" target="_blank">
             OrcDev
           </Link>{" "}
+          and{" "}
+          <Link className="underline" href="/contributors">
+            contributors
+          </Link>{" "}
           with 🪓
         </p>
       </div>
