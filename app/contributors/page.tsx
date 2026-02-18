@@ -64,7 +64,7 @@ export default async function ContributorsPage() {
   }
 
   return (
-    <div className="container mx-auto overflow-x-hidden px-4 py-8">
+    <div className="fantasy container mx-auto overflow-x-hidden px-4 py-8">
       <div className="mb-12 text-center">
         <h1 className="mb-4 font-bold text-2xl sm:text-3xl md:text-4xl">
           Champions of Warcraftcn
