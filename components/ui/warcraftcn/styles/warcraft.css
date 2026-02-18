@@ -283,23 +283,23 @@
    ============================================ */
 
 .wc-avatar-default {
-  --wc-frame-url: url("../assets/avatar-default.webp");
+  --wc-frame-url: url("https://warcraftcn.com/warcraftcn/avatar-default.webp");
 }
 
 .wc-avatar-human {
-  --wc-frame-url: url("../assets/avatar-human.webp");
+  --wc-frame-url: url("https://warcraftcn.com/warcraftcn/avatar-human.webp");
 }
 
 .wc-avatar-elf {
-  --wc-frame-url: url("../assets/avatar-elf.webp");
+  --wc-frame-url: url("https://warcraftcn.com/warcraftcn/avatar-elf.webp");
 }
 
 .wc-avatar-orc {
-  --wc-frame-url: url("../assets/avatar-orc.webp");
+  --wc-frame-url: url("https://warcraftcn.com/warcraftcn/avatar-orc.webp");
 }
 
 .wc-avatar-undead {
-  --wc-frame-url: url("../assets/avatar-undead.webp");
+  --wc-frame-url: url("https://warcraftcn.com/warcraftcn/avatar-undead.webp");
 }
 
 .wc-avatar-frame {
