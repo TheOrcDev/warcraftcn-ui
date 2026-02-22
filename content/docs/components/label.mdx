@@ -1,0 +1,61 @@
+---
+title: Label
+description: A Warcraft III styled label component for form inputs.
+---
+
+import { Label } from "@/components/ui/warcraftcn/label";
+import { Input } from "@/components/ui/warcraftcn/input";
+
+## Standard
+
+<div className="flex flex-col gap-2">
+  <Label htmlFor="character">Character Name</Label>
+  <Input id="character" className="w-96" placeholder="Enter your character name..." />
+</div>
+
+## Required
+
+<div className="flex flex-col gap-2">
+  <Label htmlFor="realm" required>Realm</Label>
+  <Input id="realm" className="w-96" placeholder="Select your realm..." />
+</div>
+
+## Disabled
+
+<div className="flex flex-col gap-2">
+  <Label htmlFor="locked" disabled>Locked Field</Label>
+  <Input id="locked" className="w-96" placeholder="This field is locked" disabled />
+</div>
+
+## Muted
+
+<div className="flex flex-col gap-2">
+  <Label htmlFor="optional" variant="muted">Optional Note</Label>
+  <Input id="optional" className="w-96" placeholder="Additional notes..." />
+</div>
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add https://warcraftcn.com/r/label.json
+```
+
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/warcraftcn/label";
+
+<Label htmlFor="email">Your Email</Label>
+```
+
+### With Required Indicator
+
+```tsx
+<Label htmlFor="name" required>Character Name</Label>
+```
+
+### Disabled State
+
+```tsx
+<Label htmlFor="locked" disabled>Locked Field</Label>
+```
