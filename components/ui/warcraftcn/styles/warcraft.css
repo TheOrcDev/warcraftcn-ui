@@ -361,3 +361,27 @@
   background-position: center;
   background-size: contain;
 }
+
+/* ============================================
+   Cursor FACTION VARIANTS
+   ============================================ */
+
+.wc-orc-cursor,
+.wc-orc-cursor * {
+  cursor: url("../assets/cursors/orc.cur"), auto;
+}
+
+.wc-human-cursor,
+.wc-human-cursor * {
+  cursor: url("../assets/cursors/human.cur"), auto;
+}
+
+.wc-elf-cursor,
+.wc-elf-cursor * {
+  cursor: url("../assets/cursors/elf.cur"), auto;
+}
+
+.wc-undead-cursor,
+.wc-undead-cursor * {
+  cursor: url("../assets/cursors/undead.cur"), auto;
+}

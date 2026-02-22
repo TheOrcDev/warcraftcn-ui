@@ -250,6 +250,45 @@
           "target": "components/ui/warcraftcn/styles/warcraft.css"
         }
       ]
+    },
+    {
+      "name": "cursor",
+      "type": "registry:component",
+      "title": "Warcraft Cursor",
+      "description": "A Warcraft-themed cursor component with faction-specific cursor styles",
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/cursor.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/cursor.tsx"
+        },
+        {
+          "path": "components/ui/warcraftcn/styles/warcraft.css",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/styles/warcraft.css"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/cursors/elf.cur",
+          "type": "registry:file",
+          "target": "components/ui/warcraftcn/assets/cursors/elf.cur"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/cursors/human.cur",
+          "type": "registry:file",
+          "target": "components/ui/warcraftcn/assets/cursors/human.cur"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/cursors/orc.cur",
+          "type": "registry:file",
+          "target": "components/ui/warcraftcn/assets/cursors/orc.cur"
+        },
+        {
+          "path": "components/ui/warcraftcn/assets/cursors/undead.cur",
+          "type": "registry:file",
+          "target": "components/ui/warcraftcn/assets/cursors/undead.cur"
+        }
+      ]
     }
   ]
 }
