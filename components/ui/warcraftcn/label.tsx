@@ -51,7 +51,7 @@ function Label({
     >
       {children}
       {required && (
-        <React.Fragment>
+        <>
           <span
             aria-hidden="true"
             className="ml-1 text-red-500 [text-shadow:0_0_6px_rgba(239,68,68,0.4)]"
@@ -59,7 +59,7 @@ function Label({
             ✦
           </span>
           <span className="sr-only">(required)</span>
-        </React.Fragment>
+        </>
       )}
     </LabelPrimitive.Root>
   );
