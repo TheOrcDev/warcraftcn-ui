@@ -2,14 +2,12 @@ import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { type VariantProps } from "class-variance-authority";
 import { buttonVariants } from "@/components/ui/warcraftcn/button";
 
 import "@/components/ui/warcraftcn/styles/warcraft.css";
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
-    role="navigation"
     aria-label="pagination"
     className={cn("mx-auto flex w-full justify-center", className)}
     {...props}
@@ -39,15 +37,19 @@ PaginationItem.displayName = "PaginationItem";
 
 type PaginationLinkProps = {
   isActive?: boolean;
+  disabled?: boolean;
 } & React.ComponentProps<"a">;
 
 const PaginationLink = ({
   className,
   isActive,
+  disabled,
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? "page" : undefined}
+    aria-disabled={disabled ? "true" : undefined}
+    tabIndex={disabled ? -1 : undefined}
     className={cn(
       buttonVariants({
         variant: "frame",
@@ -57,6 +59,7 @@ const PaginationLink = ({
       isActive
         ? "text-amber-200 [text-shadow:0_0_8px_rgba(251,191,36,0.6)] shadow-[inset_0_0_10px_rgba(0,0,0,0.8),0_0_12px_rgba(251,191,36,0.3)] brightness-110"
         : "text-amber-100/70 hover:text-amber-100 hover:shadow-[0_0_15px_rgba(251,191,36,0.3)]",
+      disabled && "opacity-50 pointer-events-none cursor-not-allowed",
       className
     )}
     {...props}
@@ -99,14 +102,16 @@ const PaginationEllipsis = ({
   ...props
 }: React.ComponentProps<"span">) => (
   <span
-    aria-hidden
     className={cn(
       "flex h-9 w-10 sm:w-12 items-center justify-center select-none",
       className
     )}
     {...props}
   >
-    <span className="text-amber-500/60 font-bold tracking-[2px] text-xs [text-shadow:0_0_4px_rgba(245,158,11,0.3)]">
+    <span 
+      aria-hidden="true"
+      className="text-amber-500/60 font-bold tracking-[2px] text-xs [text-shadow:0_0_4px_rgba(245,158,11,0.3)]"
+    >
       ♦ ♦ ♦
     </span>
     <span className="sr-only">More pages</span>

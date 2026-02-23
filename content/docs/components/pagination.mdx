@@ -72,11 +72,7 @@ import {
 <Pagination>
   <PaginationContent>
     <PaginationItem>
-      <PaginationPrevious
-        as="span"
-        aria-disabled="true"
-        className="opacity-50 pointer-events-none"
-      />
+      <PaginationPrevious disabled />
     </PaginationItem>
     <PaginationItem>
       <PaginationLink href="#" isActive>
@@ -100,11 +96,7 @@ import {
   <PaginationContent>
     <PaginationItem>
       {/* Disable the previous button since we are on the first page */}
-      <PaginationPrevious
-        as="span"
-        aria-disabled="true"
-        className="opacity-50 pointer-events-none"
-      />
+      <PaginationPrevious disabled />
     </PaginationItem>
     <PaginationItem>
       <PaginationLink href="#" isActive>
