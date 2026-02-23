@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import "@/components/ui/warcraftcn/styles/warcraft.css";
 
 const labelVariants = cva(
-  "fantasy text-sm font-medium leading-none select-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+  "fantasy text-sm font-medium leading-none select-none",
   {
     variants: {
       variant: {
@@ -24,7 +24,7 @@ const labelVariants = cva(
   }
 );
 
-type LabelProps = React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
+type LabelProps = React.ComponentProps<typeof LabelPrimitive.Root> &
   VariantProps<typeof labelVariants> & {
     required?: boolean;
     disabled?: boolean;
@@ -51,12 +51,15 @@ function Label({
     >
       {children}
       {required && (
-        <span
-          aria-hidden="true"
-          className="ml-1 text-red-500 [text-shadow:0_0_6px_rgba(239,68,68,0.4)]"
-        >
-          ✦
-        </span>
+        <React.Fragment>
+          <span
+            aria-hidden="true"
+            className="ml-1 text-red-500 [text-shadow:0_0_6px_rgba(239,68,68,0.4)]"
+          >
+            ✦
+          </span>
+          <span className="sr-only">(required)</span>
+        </React.Fragment>
       )}
     </LabelPrimitive.Root>
   );
