@@ -295,7 +295,7 @@
       "type": "registry:component",
       "title": "Warcraft Label",
       "description": "A Warcraft-themed label component for form inputs with required indicator and disabled state support",
-      "dependencies": ["@radix-ui/react-label", "class-variance-authority"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": [],
       "files": [
         {
