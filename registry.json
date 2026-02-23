@@ -309,6 +309,21 @@
           "target": "components/ui/warcraftcn/styles/warcraft.css"
         }
       ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:component",
+      "title": "Warcraft Pagination",
+      "description": "A Warcraft-themed pagination component with fantasy button styling and runes.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/pagination.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/pagination.tsx"
+        }
+      ]
     }
   ]
 }
