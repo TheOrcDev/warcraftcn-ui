@@ -57,8 +57,8 @@ const PaginationLink = ({
       "border-solid [border-image-repeat:stretch] border-5 [border-image-slice:16_fill] wc-btn-border-frame transition-all duration-200",
       "w-10 h-10 px-0 sm:w-12 sm:h-12 flex items-center justify-center font-bold no-underline",
       isActive
-        ? "text-amber-200 [text-shadow:0_0_8px_rgba(251,191,36,0.6)] shadow-[inset_0_0_10px_rgba(0,0,0,0.8),0_0_12px_rgba(251,191,36,0.3)] brightness-110"
-        : "text-amber-100/70 hover:text-amber-100 hover:shadow-[0_0_15px_rgba(251,191,36,0.3)]",
+        ? "text-amber-200 [text-shadow:0_0_8px_rgba(251,191,36,0.6)] shadow-[inset_0_0_10px_rgba(0,0,0,0.8)] brightness-110"
+        : "text-amber-100/70 hover:text-amber-100 hover:brightness-110",
       disabled && "opacity-50 pointer-events-none cursor-not-allowed",
       className
     )}
