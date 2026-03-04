@@ -1,0 +1,49 @@
+---
+title: Switch
+description: A Warcraft III styled toggle switch component.
+---
+
+import { WarcraftSwitch } from "@/components/ui/warcraftcn/switch";
+
+## Default
+
+<WarcraftSwitch />
+
+## With Label
+
+<WarcraftSwitch label="Enable Magic" />
+
+## Factions
+
+<div className="flex gap-4">
+  <WarcraftSwitch faction="human" label="Human" />
+  <WarcraftSwitch faction="orc" label="Orc" />
+  <WarcraftSwitch faction="elf" label="Elf" />
+  <WarcraftSwitch faction="undead" label="Undead" />
+</div>
+
+## Sizes
+
+<div className="flex flex-col gap-3">
+  <WarcraftSwitch size="sm" label="Small" />
+  <WarcraftSwitch size="default" label="Default" />
+  <WarcraftSwitch size="lg" label="Large" />
+</div>
+
+## Disabled
+
+<WarcraftSwitch disabled label="Disabled" />
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add https://warcraftcn.com/r/switch.json
+```
+
+## Usage
+```tsx
+    import { WarcraftSwitch } from "@/components/ui/warcraftcn/switch";
+    return (
+        <WarcraftSwitch label="Human" faction="human" size="default" />
+    )
+```
