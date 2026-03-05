@@ -46,7 +46,7 @@ export function DocsSidebar({
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
-          {tree.children.map((item) => {
+          {tree.children.map((item, index) => {
             if (item.$id === "root:index.mdx") {
               return null;
             }
@@ -56,7 +56,9 @@ export function DocsSidebar({
                 <SidebarGroupLabel className="px-2 font-semibold text-muted-foreground text-xs uppercase tracking-wider">
                   {item.name}
                 </SidebarGroupLabel>
-                <SidebarGroupContent>
+                <SidebarGroupContent
+                  className={index === tree.children.length - 1 ? "pb-10" : ""}
+                >
                   {item.type === "folder" && (
                     <SidebarMenu>
                       {item.children.map((childItem) => {
