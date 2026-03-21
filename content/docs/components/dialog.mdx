@@ -1,0 +1,59 @@
+---
+title: Dialog
+description: A Warcraft-themed dialog component with fantasy styling.
+---
+
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/warcraftcn/dialog";
+import { Button } from "@/components/ui/warcraftcn/button";
+
+## Standard
+
+<Dialog>
+  <DialogTrigger asChild>
+    <Button>Open Dialog</Button>
+  </DialogTrigger>
+  <DialogContent className="sm:max-w-md">
+    <DialogHeader>
+      <DialogTitle>Share link</DialogTitle>
+      <DialogDescription>
+        Anyone who has this link will be able to view this.
+      </DialogDescription>
+    </DialogHeader>
+    <div className="flex flex-col gap-2 py-4 text-sm text-amber-200/80">
+      <p>This is a custom Warcraft themed dialog. Note the ornate borders and thematic close button!</p>
+    </div>
+    <DialogFooter className="sm:justify-start">
+      <DialogClose asChild>
+        <Button type="button">Close</Button>
+      </DialogClose>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+
+## Installation
+
+```bash
+pnpm dlx shadcn@latest add https://warcraftcn.com/r/dialog.json
+```
+
+## Usage
+
+```tsx
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/warcraftcn/dialog";
+
+<Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Title</DialogTitle>
+      <DialogDescription>
+        Description
+      </DialogDescription>
+    </DialogHeader>
+    {/* Your content */}
+    <DialogFooter>
+      <DialogClose>Close</DialogClose>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+```

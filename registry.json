@@ -483,6 +483,26 @@
           "target": "components/ui/warcraftcn/assets/accordion-header.webp"
         }
       ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Warcraft Dialog",
+      "description": "A Warcraft-themed dialog component with fantasy styling.",
+      "dependencies": ["@radix-ui/react-dialog"],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/warcraftcn/dialog.tsx",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/dialog.tsx"
+        },
+        {
+          "path": "components/ui/warcraftcn/styles/warcraft.css",
+          "type": "registry:component",
+          "target": "components/ui/warcraftcn/styles/warcraft.css"
+        }
+      ]
     }
   ]
 }
